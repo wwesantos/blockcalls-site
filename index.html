@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH6GP44Y01"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EH6GP44Y01');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy for Contacts Only</title>
+  <title>Contacts Only</title>
   <style>
     :root {
       --navy: #071d3a;
@@ -141,6 +150,23 @@
       margin-bottom: 3px;
     }
 
+    .download-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #101c32;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: opacity 0.2s ease;
+    }
+
+    .download-link:hover {
+      opacity: 0.9;
+    }
+
     @media (max-width: 1150px) {
       header {
         padding: 0 5vw;
@@ -192,110 +218,51 @@
 
 <body>
   <header>
-    <div class="brand">
+    <a href="/" class="brand" aria-label="Go to homepage" style="text-decoration: none;">
       <div class="brand-icon">I</div>
       <span>Contacts Only</span>
-    </div>
+    </a>
   </header>
 
   <main>
-    <h1>Privacy Policy</h1>
+    <h1>Block calls from unknown numbers automatically and keep your focus.</h1>
 
     <article class="policy-card">
       <p class="intro">
-        At <strong>Contacts Only</strong>, we are committed to protecting your privacy.
-        This Privacy Policy explains how our application handles your information.
+        Regain your peace of mind with <strong>Contacts Only</strong>.
       </p>
 
       <section>
-        <h2>1. Information Collection and Use</h2>
-
         <p>
-          Our app is designed to provide call blocking services without collecting or
-          storing your personal data on any external servers.
+          Are you tired of constant interruptions from telemarketing, spam, and unknown numbers?
+          <strong>Contacts Only</strong> is the definitive and minimalist solution for anyone looking
+          for productivity and privacy.
         </p>
 
-        <h3>Contacts Data</h3>
+        <p>
+          The concept is simple: if the number is not in your address book, it will not make your phone ring.
+          The app rejects the call automatically before you are interrupted.
+        </p>
+      </section>
+
+      <section>
+        <h2>Why choose Contacts Only?</h2>
         <ul>
-          <li>
-            <strong>Purpose:</strong> The app requires access to your contact list
-            (<code>READ_CONTACTS</code> permission) to identify if an incoming call
-            is from a known contact.
-          </li>
-          <li>
-            <strong>Handling:</strong> This process happens entirely on your device.
-            We do <strong>not</strong> upload, share, or store your contacts on any server.
-            The data is only used locally to make a "Yes/No" decision to allow or block a call.
-          </li>
+          <li><strong>Total Focus:</strong> Ideal for anyone who needs concentration at work or during rest.</li>
+          <li><strong>Absolute Privacy:</strong> Your contacts are processed only locally. Nothing is sent to the cloud or shared with third parties.</li>
+          <li><strong>Simplicity:</strong> A single central button to turn protection on and off.</li>
+          <li><strong>Statistics:</strong> Keep track of how many interruptions were avoided today, yesterday, and in the last 7 days.</li>
+          <li><strong>Official Technology:</strong> We use Android's Call Screening API to ensure efficiency without draining your battery.</li>
         </ul>
-
-        <h3>Call Screening</h3>
-        <ul>
-          <li>
-            <strong>Purpose:</strong> We use the Android
-            <code>CallScreeningService</code> API to intercept incoming calls.
-          </li>
-          <li>
-            <strong>Handling:</strong> The phone numbers of incoming calls are processed
-            locally in real-time to compare them against your contact list.
-          </li>
-        </ul>
-
-        <h3>Usage Statistics</h3>
-        <ul>
-          <li>
-            <strong>Purpose:</strong> The app tracks the number of calls blocked per day
-            to show you stats.
-          </li>
-          <li>
-            <strong>Handling:</strong> These counts are stored locally on your device
-            using encrypted local storage (DataStore). We only keep data for the last
-            7 days; older entries are automatically deleted.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>2. Data Sharing</h2>
-        <p>
-          We do not sell, trade, or share any user information (contacts, phone numbers,
-          or stats) with third parties. All filtering and processing occur locally on
-          your smartphone.
-        </p>
-      </section>
-
-      <section>
-        <h2>3. Data Retention</h2>
-        <p>
-          All data generated by the app (settings and stats) stays on your device.
-          If you uninstall the app, all locally stored data is removed.
-        </p>
-      </section>
-
-      <section>
-        <h2>4. Security</h2>
-        <p>
-          We value your trust in providing us access to your contact list for filtering
-          purposes, and we strive to use commercially acceptable means of protecting it.
-          However, remember that no method of transmission over the internet, or method
-          of electronic storage is 100% secure.
-        </p>
-      </section>
-
-      <section>
-        <h2>5. Changes to This Privacy Policy</h2>
-        <p>
-          We may update our Privacy Policy from time to time. You are advised to review
-          this page periodically for any changes.
-        </p>
       </section>
 
       <section class="last-section">
-        <h2>6. Contact Us</h2>
         <p>
-          If you have any questions or suggestions about our Privacy Policy, do not
-          hesitate to contact us at: blockcalls@infodados.com.
+          Keep your contact list as your only filter and say goodbye to unwanted calls.
         </p>
+        <a class="download-link" href="https://play.google.com/store/apps/details?id=com.infodados.blockcalls" target="_blank" rel="noopener noreferrer">
+          Download on Google Play
+        </a>
       </section>
     </article>
   </main>
