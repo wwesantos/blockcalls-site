@@ -1,29 +1,268 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH6GP44Y01"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EH6GP44Y01');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>गोपनीयता नीति - केवल संपर्क</title>
+  <title>Contacts Only</title>
   <style>
-    :root { --navy:#071d3a; --text:#31516f; --bg-top:#dcecf7; --bg-bottom:#f5f8fb; --header:#f7f9fb; }
-    * { box-sizing:border-box; } body { margin:0; min-height:100vh; font-family:Arial,"Noto Sans Devanagari",sans-serif; color:var(--text); background:linear-gradient(180deg,var(--bg-top) 0%,#eaf3f9 55%,var(--bg-bottom) 100%); line-height:1.65; }
-    header { height:69px; display:flex; align-items:center; padding:0 60px; background:var(--header); } .brand { display:flex; align-items:center; gap:9px; color:#17283e; font-family:Georgia,"Times New Roman",serif; font-size:21px; font-weight:500; } .brand-icon { width:40px; height:40px; border-radius:13px; display:grid; place-items:center; background:#101c32; color:white; font-family:Georgia,"Times New Roman",serif; font-size:20px; }
-    main { max-width:1110px; margin:0 auto; padding:20px 0 30px; } h1 { margin:0 0 13px; color:var(--navy); font-family:Georgia,"Noto Serif Devanagari",serif; font-size:36px; line-height:1.2; font-weight:700; } .policy-card { background:rgba(255,255,255,.94); border-radius:25px; padding:30px 31px 28px; box-shadow:0 13px 30px rgba(31,66,97,.10); } p { margin:0 0 18px; font-size:14px; } .intro { margin-bottom:19px; } h2 { margin:0 0 19px; color:#081d35; font-size:18px; line-height:1.3; font-weight:700; } h3 { margin:0 0 13px; color:#0a2039; font-size:14px; line-height:1.3; font-weight:700; } section { margin-bottom:22px; } ul { margin:0 0 21px; padding-left:25px; } li { margin:0 0 12px; font-size:14px; } li::marker { color:#425d77; font-size:10px; } strong { color:#0b2845; font-weight:700; } code { font-family:Consolas,"Courier New",monospace; font-size:.95em; } a { color:inherit; } .last-section { margin-bottom:3px; }
-    @media (max-width:1150px) { header { padding:0 5vw; } main { max-width:none; margin:0 5vw; } } @media (max-width:700px) { header { height:62px; padding:0 20px; } .brand { font-size:19px; } .brand-icon { width:36px; height:36px; border-radius:11px; } main { margin:0 18px; padding-top:22px; } h1 { font-size:29px; margin-bottom:15px; } .policy-card { border-radius:20px; padding:24px 22px; } p,li { font-size:14px; } }
+    :root {
+      --navy: #071d3a;
+      --text: #31516f;
+      --muted: #496984;
+      --bg-top: #dcecf7;
+      --bg-bottom: #f5f8fb;
+      --white: #ffffff;
+      --header: #f7f9fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg-top) 0%, #eaf3f9 55%, var(--bg-bottom) 100%);
+      line-height: 1.65;
+    }
+
+    header {
+      height: 69px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 60px;
+      background: var(--header);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #17283e;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: #101c32;
+      color: white;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+    }
+
+    .lang-picker {
+      display: flex;
+      align-items: center;
+    }
+
+    .lang-picker select {
+      appearance: none;
+      background: #ffffff;
+      border: 1px solid rgba(16, 28, 50, 0.15);
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 9px 36px 9px 14px;
+      min-width: 140px;
+      cursor: pointer;
+      background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+      background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
+    }
+
+    main {
+      max-width: 1110px;
+      margin: 0 auto;
+      padding: 20px 0 30px;
+    }
+
+    h1 {
+      margin: 0 0 13px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .policy-card {
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 25px;
+      padding: 30px 31px 28px;
+      box-shadow: 0 13px 30px rgba(31, 66, 97, 0.10);
+    }
+
+    p {
+      margin: 0 0 18px;
+      font-size: 14px;
+    }
+
+    .intro {
+      margin-bottom: 19px;
+    }
+
+    h2 {
+      margin: 0 0 19px;
+      color: #081d35;
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin: 0 0 13px;
+      color: #0a2039;
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    section {
+      margin-bottom: 22px;
+    }
+
+    ul {
+      margin: 0 0 21px;
+      padding-left: 25px;
+    }
+
+    li {
+      margin: 0 0 12px;
+      padding-left: 0;
+      font-size: 14px;
+    }
+
+    li::marker {
+      color: #425d77;
+      font-size: 10px;
+    }
+
+    strong {
+      color: #0b2845;
+      font-weight: 700;
+    }
+
+    .last-section {
+      margin-bottom: 3px;
+    }
+
+    .privacy-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #101c32;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: opacity 0.2s ease;
+    }
+
+    .download-link:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 1150px) {
+      header { padding: 0 5vw; }
+      main { max-width: none; margin: 0 5vw; }
+    }
+
+    @media (max-width: 700px) {
+      header { height: 62px; padding: 0 20px; }
+      .brand { font-size: 19px; }
+      .brand-icon { width: 36px; height: 36px; border-radius: 11px; }
+      main { margin: 0 18px; padding-top: 22px; }
+      h1 { font-size: 29px; margin-bottom: 15px; }
+      .policy-card { border-radius: 20px; padding: 24px 22px; }
+      p, li { font-size: 14px; }
+    }
   </style>
 </head>
-<body><header><a href="/" class="brand" aria-label="Go to homepage" style="text-decoration: none;"><div class="brand-icon">I</div><span>Contacts Only</span></a></header><main><h1>केवल संपर्कों के लिए गोपनीयता नीति</h1><article class="policy-card">
-<p class="intro"><strong>केवल संपर्क</strong> में हम आपकी गोपनीयता की रक्षा करने के लिए प्रतिबद्ध हैं। यह गोपनीयता नीति बताती है कि हमारा ऐप आपकी जानकारी को कैसे संभालता है।</p>
-<section><h2>1. जानकारी का संग्रह और उपयोग</h2><p>हमारा ऐप किसी बाहरी सर्वर पर आपका व्यक्तिगत डेटा एकत्र या संग्रहीत किए बिना कॉल ब्लॉकिंग सेवाएं प्रदान करने के लिए बनाया गया है।</p><h3>संपर्क डेटा</h3><ul><li><strong>उद्देश्य:</strong> आने वाली कॉल किसी ज्ञात संपर्क से है या नहीं, यह पहचानने के लिए ऐप को आपकी संपर्क सूची (<code>READ_CONTACTS</code> अनुमति) तक पहुंच की आवश्यकता होती है।</li><li><strong>प्रबंधन:</strong> यह प्रक्रिया पूरी तरह आपके डिवाइस पर होती है। हम आपके संपर्कों को किसी सर्वर पर अपलोड, साझा या संग्रहीत नहीं करते। डेटा का उपयोग केवल कॉल की अनुमति देने या उसे ब्लॉक करने का स्थानीय निर्णय लेने के लिए किया जाता है।</li></ul><h3>कॉल स्क्रीनिंग</h3><ul><li><strong>उद्देश्य:</strong> आने वाली कॉल को रोकने के लिए हम Android <code>CallScreeningService</code> API का उपयोग करते हैं।</li><li><strong>प्रबंधन:</strong> आने वाली कॉल के फोन नंबरों को आपकी संपर्क सूची से मिलाने के लिए स्थानीय रूप से और तुरंत संसाधित किया जाता है।</li></ul><h3>उपयोग के आंकड़े</h3><ul><li><strong>उद्देश्य:</strong> आपको आंकड़े दिखाने के लिए ऐप प्रतिदिन ब्लॉक की गई कॉल की संख्या दर्ज करता है।</li><li><strong>प्रबंधन:</strong> ये गणनाएं एन्क्रिप्टेड स्थानीय स्टोरेज (DataStore) का उपयोग करके आपके डिवाइस पर संग्रहीत होती हैं। हम केवल पिछले 7 दिनों का डेटा रखते हैं; पुराने रिकॉर्ड अपने आप हटा दिए जाते हैं।</li></ul></section>
-<section><h2>2. डेटा साझा करना</h2><p>हम उपयोगकर्ता की कोई भी जानकारी (संपर्क, फोन नंबर या आंकड़े) तीसरे पक्ष को बेचते, बदलते या साझा नहीं करते। सभी फ़िल्टरिंग और प्रसंस्करण आपके स्मार्टफोन पर स्थानीय रूप से होता है।</p></section><section><h2>3. डेटा का रखरखाव</h2><p>ऐप द्वारा बनाया गया सारा डेटा (सेटिंग और आंकड़े) आपके डिवाइस पर रहता है। यदि आप ऐप को अनइंस्टॉल करते हैं, तो स्थानीय रूप से संग्रहीत सभी डेटा हटा दिया जाता है।</p></section><section><h2>4. सुरक्षा</h2><p>फ़िल्टरिंग के लिए आपकी संपर्क सूची तक पहुंच देने में आप जो भरोसा दिखाते हैं, हम उसका सम्मान करते हैं और उसकी सुरक्षा के लिए व्यावसायिक रूप से स्वीकार्य साधनों का उपयोग करने का प्रयास करते हैं। हालांकि, इंटरनेट पर डेटा भेजने या इलेक्ट्रॉनिक रूप से संग्रहीत करने का कोई भी तरीका 100% सुरक्षित नहीं है।</p></section><section><h2>5. इस गोपनीयता नीति में बदलाव</h2><p>हम समय-समय पर अपनी गोपनीयता नीति को अपडेट कर सकते हैं। किसी भी बदलाव के लिए आपको इस पेज की नियमित रूप से समीक्षा करने की सलाह दी जाती है।</p></section><section class="last-section"><h2>6. हमसे संपर्क करें</h2><p>हमारी गोपनीयता नीति के बारे में आपके कोई प्रश्न या सुझाव हों, तो <a href="mailto:blockcalls@infodados.com">blockcalls@infodados.com</a> पर हमसे संपर्क करें।</p></section>
-</article></main></body>
+<body>
+  <header>
+    <a href="/" class="brand" aria-label="मुख्य पेज पर जाएँ" style="text-decoration: none;">
+      <div class="brand-icon">I</div>
+      <span>Contacts Only</span>
+    </a>
+
+    <label class="lang-picker" aria-label="भाषा चुनें">
+      <select onchange="window.location.href=this.value">
+        <option value="/">English</option>
+        <option value="/ar/">العربية</option>
+        <option value="/de/">Deutsch</option>
+        <option value="/fr/">Français</option>
+        <option value="/hi/" selected>हिन्दी</option>
+        <option value="/it/">Italiano</option>
+        <option value="/ja/">日本語</option>
+        <option value="/pt/">Português</option>
+        <option value="/zh/">中文</option>
+      </select>
+    </label>
+  </header>
+
+  <main>
+    <h1>अजाने नंबरों से आने वाले कॉल को अपने आप ब्लॉक करें और अपना फोकस बनाए रखें।</h1>
+
+    <article class="policy-card">
+      <p class="intro">
+        <strong>Contacts Only</strong> के साथ अपनी शांति वापस पाएं।
+      </p>
+
+      <section>
+        <p>
+          क्या आप टेलीमार्केटिंग, स्पैम और अज्ञात नंबरों से लगातार रुकावटों से थक गए हैं?
+          <strong>Contacts Only</strong> उत्पादकता और गोपनीयता की तलाश करने वालों के लिए एक परिपूर्ण और सरल समाधान है।
+        </p>
+
+        <p>
+          सिर्फ इतना आसान है: अगर नंबर आपके एड्रेस बुक में नहीं है, तो आपका फोन नहीं बजेगा।
+          ऐप आपको बाधित होने से पहले कॉल को अपने आप रद्द कर देता है।
+        </p>
+      </section>
+
+      <section>
+        <h2>Contacts Only क्यों चुनें?</h2>
+        <ul>
+          <li><strong>पूर्ण फोकस:</strong> यह उन लोगों के लिए बिल्कुल सही है जिन्हें काम के दौरान या आराम के समय रुकावटों से बचने की ज़रूरत होती है।</li>
+          <li><strong>पूर्ण गोपनीयता:</strong> आपके संपर्क केवल स्थानीय रूप से संसाधित किए जाते हैं। कुछ भी क्लाउड में नहीं भेजा जाता और किसी तीसरे पक्ष के साथ साझा नहीं किया जाता है।</li>
+          <li><strong>सरलता:</strong> सुरक्षा को चालू या बंद करने के लिए एक ही मुख्य बटन।</li>
+          <li><strong>आँकड़े:</strong> देखें कि आज, कल और पिछले 7 दिनों में कितनी रुकावटें रोकी गईं।</li>
+          <li><strong>अधिकृत तकनीक:</strong> हम Android का Call Screening API उपयोग करते हैं, जिससे बैटरी खत्म होने के बिना प्रभावी सुरक्षा मिलती है।</li>
+        </ul>
+      </section>
+
+      <section class="last-section">
+        <p>
+          अपने संपर्क सूची को अपना एकमात्र फ़िल्टर बनाएं और अवांछित कॉल को अलविदा कहें।
+        </p>
+        <a class="privacy-link" href="privacy-policy/">गोपनीयता नीति</a>
+        <br>
+        <a class="download-link" href="https://play.google.com/store/apps/details?id=com.infodados.blockcalls" target="_blank" rel="noopener noreferrer">
+          Google Play पर डाउनलोड करें
+        </a>
+      </section>
+    </article>
+  </main>
+</body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo contatti: blocco chiamate</title>
+  <meta name="description" content="Sei stanco di chiamate fastidiose? Solo contatti blocca tutte le chiamate da numeri che non sono nei tuoi contatti.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blockcalls.infodados.com/it/share/">
+  <meta property="og:title" content="Solo contatti: blocco chiamate">
+  <meta property="og:description" content="Sei stanco di chiamate fastidiose? Solo contatti blocca tutte le chiamate da numeri che non sono nei tuoi contatti.">
+  <meta property="og:image" content="https://blockcalls.infodados.com/social_1200_600.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Solo contatti">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solo contatti: blocco chiamate">
+  <meta name="twitter:description" content="Sei stanco di chiamate fastidiose? Solo contatti blocca tutte le chiamate da numeri che non sono nei tuoi contatti.">
+  <meta name="twitter:image" content="https://blockcalls.infodados.com/social_1200_600.png">
+  <style>
+    :root { --navy:#071d3a; --text:#31516f; --muted:#496984; --bg-top:#dcecf7; --bg-bottom:#f5f8fb; --white:#ffffff; --header:#f7f9fb; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; font-family:Arial,Helvetica,sans-serif; color:var(--text); background:linear-gradient(180deg,var(--bg-top) 0%,#eaf3f9 55%,var(--bg-bottom) 100%); line-height:1.65; }
+    header { height:69px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:0 60px; background:var(--header); }
+    .brand { display:flex; align-items:center; gap:9px; color:#17283e; font-family:Georgia,"Times New Roman",serif; font-size:21px; font-weight:500; text-decoration:none; }
+    .brand-icon { width:40px; height:40px; border-radius:13px; display:grid; place-items:center; background:#101c32; color:white; font-family:Georgia,"Times New Roman",serif; font-size:20px; }
+    .lang-picker { display:flex; align-items:center; }
+    .lang-picker select { appearance:none; background:#fff; border:1px solid rgba(16,28,50,.15); border-radius:999px; color:var(--navy); font-size:14px; font-weight:700; padding:9px 36px 9px 14px; min-width:140px; cursor:pointer; background-image:linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%); background-position:calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px); background-size:6px 6px, 6px 6px; background-repeat:no-repeat; }
+    main { max-width:720px; margin:0 auto; padding:40px 20px 60px; text-align:center; }
+    .share-card { background:rgba(255,255,255,.94); border-radius:25px; padding:30px; box-shadow:0 13px 30px rgba(31,66,97,.10); }
+    .share-card img { width:100%; height:auto; border-radius:16px; display:block; margin-bottom:24px; }
+    h1 { margin:0 0 13px; color:var(--navy); font-family:Georgia,"Times New Roman",serif; font-size:30px; line-height:1.25; font-weight:700; letter-spacing:-0.3px; }
+    p.description { margin:0 0 26px; font-size:16px; color:var(--muted); }
+    .download-link { display:inline-block; background:var(--navy); color:var(--white); text-decoration:none; font-size:15px; font-weight:700; padding:14px 28px; border-radius:12px; }
+    .redirect-notice { margin:16px 0 0; font-size:13px; color:var(--muted); }
+    @media (max-width:700px) { header { padding:0 20px; height:62px; } .brand { font-size:19px; } .brand-icon { width:36px; height:36px; border-radius:11px; } main { padding:28px 16px 48px; } .share-card { border-radius:20px; padding:22px; } h1 { font-size:24px; } p.description { font-size:14px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="brand" aria-label="Vai alla homepage">
+      <div class="brand-icon">I</div>
+      <span>Solo contatti</span>
+    </a>
+    <label class="lang-picker" aria-label="Scegli la lingua">
+      <select onchange="window.location.href=this.value">
+        <option value="/">English</option>
+        <option value="/ar/">العربية</option>
+        <option value="/de/">Deutsch</option>
+        <option value="/fr/">Français</option>
+        <option value="/hi/">हिन्दी</option>
+        <option value="/it/" selected>Italiano</option>
+        <option value="/ja/">日本語</option>
+        <option value="/pt/">Português</option>
+        <option value="/zh/">中文</option>
+      </select>
+    </label>
+  </header>
+  <main>
+    <article class="share-card">
+      <img src="/social_1200_600.png" alt="Solo contatti: blocco chiamate" width="1200" height="600">
+      <h1>Solo contatti</h1>
+      <h1>blocco chiamate</h1>
+      <p class="description">Sei stanco di chiamate fastidiose? Solo contatti blocca tutte le chiamate da numeri che non sono nei tuoi contatti.</p>
+      <a class="download-link" href="https://play.google.com/store/apps/details?id=com.infodados.blockcalls" target="_blank" rel="noopener noreferrer">Scarica su Google Play</a>
+      <p class="redirect-notice">Verrai reindirizzato al Play Store tra <span id="redirect-countdown">5</span> secondi...</p>
+    </article>
+  </main>
+  <script>
+    (function () {
+      var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.infodados.blockcalls';
+      var seconds = 6;
+      var countdownEl = document.getElementById('redirect-countdown');
+      var timer = setInterval(function () {
+        seconds -= 1;
+        if (countdownEl) {
+          countdownEl.textContent = String(Math.max(seconds, 0));
+        }
+        if (seconds <= 0) {
+          clearInterval(timer);
+          window.location.href = PLAY_STORE_URL;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>

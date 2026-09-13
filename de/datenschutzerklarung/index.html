@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH6GP44Y01"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EH6GP44Y01');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung für Nur Kontakte</title>
+  <style>
+    :root { --navy:#071d3a; --text:#31516f; --bg-top:#dcecf7; --bg-bottom:#f5f8fb; --header:#f7f9fb; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; font-family:Arial,Helvetica,sans-serif; color:var(--text); background:linear-gradient(180deg,var(--bg-top) 0%,#eaf3f9 55%,var(--bg-bottom) 100%); line-height:1.65; }
+    header { height:69px; display:flex; align-items:center; padding:0 60px; background:var(--header); }
+    .brand { display:flex; align-items:center; gap:9px; color:#17283e; font-family:Georgia,"Times New Roman",serif; font-size:21px; font-weight:500; }
+    .brand-icon { width:40px; height:40px; border-radius:13px; display:grid; place-items:center; background:#101c32; color:white; font-family:Georgia,"Times New Roman",serif; font-size:20px; }
+    main { max-width:1110px; margin:0 auto; padding:20px 0 30px; }
+    h1 { margin:0 0 13px; color:var(--navy); font-family:Georgia,"Times New Roman",serif; font-size:36px; line-height:1.2; font-weight:700; letter-spacing:-.3px; }
+    .policy-card { background:rgba(255,255,255,.94); border-radius:25px; padding:30px 31px 28px; box-shadow:0 13px 30px rgba(31,66,97,.10); }
+    p { margin:0 0 18px; font-size:14px; } .intro { margin-bottom:19px; }
+    h2 { margin:0 0 19px; color:#081d35; font-size:18px; line-height:1.3; font-weight:700; } h3 { margin:0 0 13px; color:#0a2039; font-size:14px; line-height:1.3; font-weight:700; }
+    section { margin-bottom:22px; } ul { margin:0 0 21px; padding-left:25px; } li { margin:0 0 12px; padding-left:0; font-size:14px; } li::marker { color:#425d77; font-size:10px; } strong { color:#0b2845; font-weight:700; } code { font-family:Consolas,"Courier New",monospace; font-size:.95em; } .last-section { margin-bottom:3px; }
+    @media (max-width:1150px) { header { padding:0 5vw; } main { max-width:none; margin:0 5vw; } }
+    @media (max-width:700px) { header { height:62px; padding:0 20px; } .brand { font-size:19px; } .brand-icon { width:36px; height:36px; border-radius:11px; } main { margin:0 18px; padding-top:22px; } h1 { font-size:29px; margin-bottom:15px; } .policy-card { border-radius:20px; padding:24px 22px; } p,li { font-size:14px; } }
+  </style>
+</head>
+<body>
+  <header><a href="/" class="brand" aria-label="Go to homepage" style="text-decoration: none;"><div class="brand-icon">I</div><span>Nur Kontakte</span></a></header>
+  <main>
+    <h1>Datenschutzerklärung</h1>
+    <article class="policy-card">
+      <p class="intro">Bei <strong>Nur Kontakte</strong> verpflichten wir uns, Ihre Privatsphäre zu schützen. Diese Datenschutzerklärung erläutert, wie unsere Anwendung mit Ihren Informationen umgeht.</p>
+      <section><h2>1. Erhebung und Verwendung von Informationen</h2>
+        <p>Unsere App wurde entwickelt, um Anrufe zu blockieren, ohne Ihre personenbezogenen Daten auf externen Servern zu erheben oder zu speichern.</p>
+        <h3>Kontaktdaten</h3><ul>
+          <li><strong>Zweck:</strong> Die App benötigt Zugriff auf Ihre Kontaktliste (Berechtigung <code>READ_CONTACTS</code>), um festzustellen, ob ein eingehender Anruf von einem bekannten Kontakt stammt.</li>
+          <li><strong>Verarbeitung:</strong> Dieser Vorgang findet vollständig auf Ihrem Gerät statt. Wir laden Ihre Kontakte nicht auf einen Server hoch, geben sie nicht weiter und speichern sie dort nicht. Die Daten werden ausschließlich lokal verwendet, um zu entscheiden, ob ein Anruf zugelassen oder blockiert wird.</li>
+        </ul>
+        <h3>Anrufüberprüfung</h3><ul>
+          <li><strong>Zweck:</strong> Wir verwenden die Android-API <code>CallScreeningService</code>, um eingehende Anrufe zu prüfen.</li>
+          <li><strong>Verarbeitung:</strong> Telefonnummern eingehender Anrufe werden in Echtzeit lokal verarbeitet und mit Ihrer Kontaktliste verglichen.</li>
+        </ul>
+        <h3>Nutzungsstatistiken</h3><ul>
+          <li><strong>Zweck:</strong> Die App erfasst die Anzahl der täglich blockierten Anrufe, um Ihnen Statistiken anzuzeigen.</li>
+          <li><strong>Verarbeitung:</strong> Diese Zähler werden lokal auf Ihrem Gerät mit verschlüsseltem Speicher (DataStore) gespeichert. Wir bewahren nur Daten der letzten 7 Tage auf; ältere Einträge werden automatisch gelöscht.</li>
+        </ul>
+      </section>
+      <section><h2>2. Weitergabe von Daten</h2><p>Wir verkaufen, tauschen oder teilen keine Nutzerdaten (Kontakte, Telefonnummern oder Statistiken) mit Dritten. Alle Filter- und Verarbeitungsvorgänge finden lokal auf Ihrem Smartphone statt.</p></section>
+      <section><h2>3. Datenaufbewahrung</h2><p>Alle von der App erzeugten Daten (Einstellungen und Statistiken) bleiben auf Ihrem Gerät. Wenn Sie die App deinstallieren, werden alle lokal gespeicherten Daten entfernt.</p></section>
+      <section><h2>4. Sicherheit</h2><p>Wir schätzen Ihr Vertrauen, uns für die Filterung Zugriff auf Ihre Kontaktliste zu gewähren, und bemühen uns, diese mit wirtschaftlich vertretbaren Mitteln zu schützen. Bitte beachten Sie jedoch, dass keine Übertragung über das Internet und keine elektronische Speicherung zu 100 % sicher ist.</p></section>
+      <section><h2>5. Änderungen dieser Datenschutzerklärung</h2><p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Es wird empfohlen, diese Seite regelmäßig auf Änderungen zu prüfen.</p></section>
+      <section class="last-section"><h2>6. Kontakt</h2><p>Wenn Sie Fragen oder Vorschläge zu unserer Datenschutzerklärung haben, kontaktieren Sie uns bitte unter: <a href="mailto:blockcalls@infodados.com">blockcalls@infodados.com</a>.</p></section>
+    </article>
+  </main>
+</body>
+</html>

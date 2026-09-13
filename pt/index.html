@@ -1,22 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH6GP44Y01"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EH6GP44Y01');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Privacidade - Só Quem Conheço</title>
+  <title>Contacts Only</title>
   <style>
     :root {
       --navy: #071d3a;
       --text: #31516f;
+      --muted: #496984;
       --bg-top: #dcecf7;
       --bg-bottom: #f5f8fb;
       --white: #ffffff;
@@ -30,12 +22,7 @@
       min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: linear-gradient(
-        180deg,
-        var(--bg-top) 0%,
-        #eaf3f9 55%,
-        var(--bg-bottom) 100%
-      );
+      background: linear-gradient(180deg, var(--bg-top) 0%, #eaf3f9 55%, var(--bg-bottom) 100%);
       line-height: 1.65;
     }
 
@@ -43,6 +30,8 @@
       height: 69px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 16px;
       padding: 0 60px;
       background: var(--header);
     }
@@ -55,6 +44,7 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: 21px;
       font-weight: 500;
+      text-decoration: none;
     }
 
     .brand-icon {
@@ -67,6 +57,28 @@
       color: white;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 20px;
+    }
+
+    .lang-picker {
+      display: flex;
+      align-items: center;
+    }
+
+    .lang-picker select {
+      appearance: none;
+      background: #ffffff;
+      border: 1px solid rgba(16, 28, 50, 0.15);
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 9px 36px 9px 14px;
+      min-width: 140px;
+      cursor: pointer;
+      background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+      background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
     }
 
     main {
@@ -97,7 +109,9 @@
       font-size: 14px;
     }
 
-    .intro { margin-bottom: 19px; }
+    .intro {
+      margin-bottom: 19px;
+    }
 
     h2 {
       margin: 0 0 19px;
@@ -115,7 +129,9 @@
       font-weight: 700;
     }
 
-    section { margin-bottom: 22px; }
+    section {
+      margin-bottom: 22px;
+    }
 
     ul {
       margin: 0 0 21px;
@@ -124,6 +140,7 @@
 
     li {
       margin: 0 0 12px;
+      padding-left: 0;
       font-size: 14px;
     }
 
@@ -137,166 +154,113 @@
       font-weight: 700;
     }
 
-    code {
-      font-family: Consolas, "Courier New", monospace;
-      font-size: 0.95em;
+    .last-section {
+      margin-bottom: 3px;
     }
 
-    a {
-      color: inherit;
+    .privacy-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: underline;
     }
 
-    .last-section { margin-bottom: 3px; }
+    .download-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #101c32;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: opacity 0.2s ease;
+    }
+
+    .download-link:hover {
+      opacity: 0.9;
+    }
 
     @media (max-width: 1150px) {
       header { padding: 0 5vw; }
-      main {
-        max-width: none;
-        margin: 0 5vw;
-      }
+      main { max-width: none; margin: 0 5vw; }
     }
 
     @media (max-width: 700px) {
-      header {
-        height: 62px;
-        padding: 0 20px;
-      }
-
+      header { height: 62px; padding: 0 20px; }
       .brand { font-size: 19px; }
-
-      .brand-icon {
-        width: 36px;
-        height: 36px;
-        border-radius: 11px;
-      }
-
-      main {
-        margin: 0 18px;
-        padding-top: 22px;
-      }
-
-      h1 {
-        font-size: 29px;
-        margin-bottom: 15px;
-      }
-
-      .policy-card {
-        border-radius: 20px;
-        padding: 24px 22px;
-      }
-
+      .brand-icon { width: 36px; height: 36px; border-radius: 11px; }
+      main { margin: 0 18px; padding-top: 22px; }
+      h1 { font-size: 29px; margin-bottom: 15px; }
+      .policy-card { border-radius: 20px; padding: 24px 22px; }
       p, li { font-size: 14px; }
     }
   </style>
 </head>
-
 <body>
   <header>
-    <a href="/" class="brand" aria-label="Go to homepage" style="text-decoration: none;">
+    <a href="/" class="brand" aria-label="Ir para a página inicial" style="text-decoration: none;">
       <div class="brand-icon">I</div>
-      <span>Só Quem Conheço</span>
+      <span>Contacts Only</span>
     </a>
+
+    <label class="lang-picker" aria-label="Selecionar idioma">
+      <select onchange="window.location.href=this.value">
+        <option value="/">English</option>
+        <option value="/ar/">العربية</option>
+        <option value="/de/">Deutsch</option>
+        <option value="/fr/">Français</option>
+        <option value="/hi/">हिन्दी</option>
+        <option value="/it/">Italiano</option>
+        <option value="/ja/">日本語</option>
+        <option value="/pt/" selected>Português</option>
+        <option value="/zh/">中文</option>
+      </select>
+    </label>
   </header>
 
   <main>
-    <h1>Política de Privacidade</h1>
+    <h1>Bloqueie automaticamente chamadas de números desconhecidos e mantenha o foco.</h1>
 
     <article class="policy-card">
       <p class="intro">
-        No <strong>Só Quem Conheço</strong>, estamos comprometidos em proteger sua privacidade.
-        Esta Política de Privacidade explica como nosso aplicativo gerencia suas informações.
+        Recupere sua paz de espírito com <strong>Contacts Only</strong>.
       </p>
 
       <section>
-        <h2>1. Coleta e Uso de Informações</h2>
-
         <p>
-          Nosso aplicativo foi projetado para fornecer serviços de bloqueio de chamadas
-          sem coletar ou armazenar seus dados pessoais em servidores externos.
+          Você está cansado de interrupções constantes por telemarketing, spam e números desconhecidos?
+          <strong>Contacts Only</strong> é a solução definitiva e minimalista para quem busca produtividade e privacidade.
         </p>
 
-        <h3>Dados de Contatos</h3>
+        <p>
+          O conceito é simples: se o número não estiver na sua agenda, o celular não tocará.
+          O aplicativo rejeita a chamada automaticamente antes de te interromper.
+        </p>
+      </section>
+
+      <section>
+        <h2>Por que escolher o Contacts Only?</h2>
         <ul>
-          <li>
-            <strong>Finalidade:</strong> O aplicativo requer acesso à sua lista de contatos
-            (permissão <code>READ_CONTACTS</code>) para identificar se uma chamada recebida
-            é de um contato conhecido.
-          </li>
-          <li>
-            <strong>Gerenciamento:</strong> Este processo ocorre inteiramente no seu dispositivo.
-            Nós <strong>não</strong> enviamos, compartilhamos ou armazenamos seus contatos em
-            nenhum servidor. Os dados são usados apenas localmente para decidir se permite
-            ou bloqueia uma chamada.
-          </li>
+          <li><strong>Foco total:</strong> Ideal para quem precisa de concentração no trabalho ou em momentos de descanso.</li>
+          <li><strong>Privacidade absoluta:</strong> Seus contatos são processados apenas localmente. Nada é enviado para a nuvem ou compartilhado com terceiros.</li>
+          <li><strong>Simplicidade:</strong> Um único botão central para ativar ou desativar a proteção.</li>
+          <li><strong>Estatísticas:</strong> Acompanhe quantas interrupções foram evitadas hoje, ontem e nos últimos 7 dias.</li>
+          <li><strong>Tecnologia oficial:</strong> Usamos a API Android Call Screening para garantir eficiência sem drenar sua bateria.</li>
         </ul>
-
-        <h3>Triagem de Chamadas (Call Screening)</h3>
-        <ul>
-          <li>
-            <strong>Finalidade:</strong> Usamos a API <code>CallScreeningService</code>
-            do Android para interceptar chamadas recebidas.
-          </li>
-          <li>
-            <strong>Gerenciamento:</strong> Os números de telefone das chamadas recebidas
-            são processados localmente em tempo real para comparação com sua lista de contatos.
-          </li>
-        </ul>
-
-        <h3>Estatísticas de Uso</h3>
-        <ul>
-          <li>
-            <strong>Finalidade:</strong> O aplicativo rastreia o número de chamadas bloqueadas
-            por dia para exibir estatísticas.
-          </li>
-          <li>
-            <strong>Gerenciamento:</strong> Essas contagens são armazenadas localmente no seu
-            dispositivo. Mantemos apenas os dados dos últimos 7 dias; entradas mais antigas
-            são excluídas automaticamente.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>2. Compartilhamento de Dados</h2>
-        <p>
-          Nós <strong>não</strong> vendemos, trocamos ou compartilhamos qualquer informação
-          do usuário (contatos, números de telefone ou estatísticas) com terceiros.
-          Todo o processamento ocorre localmente no seu smartphone.
-        </p>
-      </section>
-
-      <section>
-        <h2>3. Retenção de Dados</h2>
-        <p>
-          Todos os dados gerados pelo aplicativo (configurações e estatísticas) permanecem
-          no seu dispositivo. Se você desinstalar o aplicativo, todos os dados armazenados
-          localmente serão removidos.
-        </p>
-      </section>
-
-      <section>
-        <h2>4. Segurança</h2>
-        <p>
-          Valorizamos sua confiança em nos fornecer acesso à sua lista de contatos para fins
-          de filtragem e nos esforçamos para usar meios comercialmente aceitáveis de protegê-la.
-        </p>
-      </section>
-
-      <section>
-        <h2>5. Alterações nesta Política de Privacidade</h2>
-        <p>
-          Podemos atualizar nossa Política de Privacidade periodicamente. Recomendamos que
-          você revise esta página regularmente para verificar quaisquer alterações.
-        </p>
       </section>
 
       <section class="last-section">
-        <h2>6. Contato</h2>
         <p>
-          Se você tiver alguma dúvida ou sugestão sobre nossa Política de Privacidade,
-          não hesite em nos contatar em:
-          <a href="mailto:blockcalls@infodados.com">blockcalls@infodados.com</a>.
+          Mantenha sua lista de contatos como único filtro e diga adeus às ligações indesejadas.
         </p>
+        <a class="privacy-link" href="politica-de-privacidade/">Política de privacidade</a>
+        <br>
+        <a class="download-link" href="https://play.google.com/store/apps/details?id=com.infodados.blockcalls" target="_blank" rel="noopener noreferrer">
+          Baixe na Google Play
+        </a>
       </section>
     </article>
   </main>
