@@ -139,6 +139,12 @@
       border-radius: 12px;
     }
 
+    .redirect-notice {
+      margin: 16px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
     @media (max-width: 700px) {
       header { padding: 0 20px; height: 62px; }
       .brand { font-size: 19px; }
@@ -161,16 +167,40 @@
 
   <main>
     <article class="share-card">
-      <img src="/social_1200_600.png" alt="Só Quem Conheço : Bloqueio Telemarketing" width="1200" height="600">
+      <a class="download-link" href="https://play.google.com/store/apps/details?id=com.infodados.blockcalls" target="_blank" rel="noopener noreferrer">
+        <img src="/social_1200_600.png" alt="Só Quem Conheço : Bloqueio Telemarketing" width="1200" height="600">  
+      </a>
       <h1>Só Quem Conheço</h1>
-      <h1>Bloqueio Telemarketing</h1>
+      <h1>Bloqueio de Telemarketing</h1>
       <p class="description">
         Você cansou de ligações incovenienntes? Só Quem Conheço bloqueia todas as liagações de quem não estiver nos seus contatos.
       </p>
       <a class="download-link" href="https://play.google.com/store/apps/details?id=com.infodados.blockcalls" target="_blank" rel="noopener noreferrer">
         Baixar na Play Store
       </a>
+      <p class="redirect-notice">
+        Você será redirecionado para a Play Store em <span id="redirect-countdown">5</span> segundos...
+      </p>
     </article>
   </main>
+
+  <script>
+    (function () {
+      var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.infodados.blockcalls';
+      var seconds = 5;
+      var countdownEl = document.getElementById('redirect-countdown');
+
+      var timer = setInterval(function () {
+        seconds -= 1;
+        if (countdownEl) {
+          countdownEl.textContent = String(Math.max(seconds, 0));
+        }
+        if (seconds <= 0) {
+          clearInterval(timer);
+          window.location.href = PLAY_STORE_URL;
+        }
+      }, 1000);
+    })();
+  </script>
 </body>
 </html>
