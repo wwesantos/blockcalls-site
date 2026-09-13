@@ -46,6 +46,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blockcalls.infodados.com/pt/compartilhar/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://blockcalls.infodados.com/zh/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
