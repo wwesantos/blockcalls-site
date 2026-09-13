@@ -119,6 +119,22 @@
   </url>
 
   <url>
+    <loc>https://blockcalls.infodados.com/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blockcalls.infodados.com/es/privacy-policy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blockcalls.infodados.com/es/share/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://blockcalls.infodados.com/pt/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

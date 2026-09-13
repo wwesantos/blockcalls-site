@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH6GP44Y01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EH6GP44Y01');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacts uniquement | Blocage des appels</title>
+  <title>Solo Contactos | Bloqueador de llamadas</title>
   <style>
     :root {
       --navy: #071d3a;
@@ -15,14 +24,17 @@
       --header: #f7f9fb;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, var(--bg-top) 0%, #eaf3f9 55%, var(--bg-bottom) 100%);
+      background:
+        linear-gradient(180deg, var(--bg-top) 0%, #eaf3f9 55%, var(--bg-bottom) 100%);
       line-height: 1.65;
     }
 
@@ -121,18 +133,6 @@
       font-weight: 700;
     }
 
-    h3 {
-      margin: 0 0 13px;
-      color: #0a2039;
-      font-size: 14px;
-      line-height: 1.3;
-      font-weight: 700;
-    }
-
-    section {
-      margin-bottom: 22px;
-    }
-
     ul {
       margin: 0 0 21px;
       padding-left: 25px;
@@ -152,10 +152,6 @@
     strong {
       color: #0b2845;
       font-weight: 700;
-    }
-
-    .last-section {
-      margin-bottom: 3px;
     }
 
     .privacy-link {
@@ -184,35 +180,68 @@
     }
 
     @media (max-width: 1150px) {
-      header { padding: 0 5vw; }
-      main { max-width: none; margin: 0 5vw; }
+      header {
+        padding: 0 5vw;
+      }
+
+      main {
+        max-width: none;
+        margin: 0 5vw;
+      }
     }
 
     @media (max-width: 700px) {
-      header { height: 62px; padding: 0 20px; }
-      .brand { font-size: 19px; }
-      .brand-icon { width: 36px; height: 36px; border-radius: 11px; }
-      main { margin: 0 18px; padding-top: 22px; }
-      h1 { font-size: 29px; margin-bottom: 15px; }
-      .policy-card { border-radius: 20px; padding: 24px 22px; }
-      p, li { font-size: 14px; }
+      header {
+        height: 62px;
+        padding: 0 20px;
+      }
+
+      .brand {
+        font-size: 19px;
+      }
+
+      .brand-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 11px;
+      }
+
+      main {
+        margin: 0 18px;
+        padding-top: 22px;
+      }
+
+      h1 {
+        font-size: 29px;
+        margin-bottom: 15px;
+      }
+
+      .policy-card {
+        border-radius: 20px;
+        padding: 24px 22px;
+      }
+
+      p, li {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <a href="/" class="brand" aria-label="Aller à la page d'accueil" style="text-decoration: none;">
+    <a href="/" class="brand" aria-label="Ir a la página principal">
       <div class="brand-icon">I</div>
-      <span>Contacts uniquement | Blocage des appels</span>
+      <span>Solo Contactos | Bloqueador de llamadas</span>
     </a>
 
-    <label class="lang-picker" aria-label="Choisir la langue">
+    <label class="lang-picker" aria-label="Selecciona el idioma">
       <select onchange="window.location.href=this.value">
-        <option value="/en/">English</option>
-        <option value="/es/">Español</option>
+        <option value="/">English</option>
+        <option value="/es/" selected>Español</option>
         <option value="/ar/">العربية</option>
         <option value="/de/">Deutsch</option>
-        <option value="/fr/" selected>Français</option>
+        <option value="/fr/">Français</option>
         <option value="/hi/">हिन्दी</option>
         <option value="/it/">Italiano</option>
         <option value="/ja/">日本語</option>
@@ -223,44 +252,45 @@
   </header>
 
   <main>
-    <h1>Bloquez automatiquement les appels des numéros inconnus et gardez votre concentration.</h1>
+    <h1>Bloquea llamadas de números desconocidos automáticamente y mantén tu enfoque.</h1>
 
     <article class="policy-card">
       <p class="intro">
-        Rétablissez votre sérénité avec <strong>Contacts uniquement</strong>.
+        Recupera la tranquilidad con <strong>Solo Contactos</strong>.
       </p>
 
       <section>
         <p>
-          Vous en avez assez d’être interrompu en permanence par les appels marketing, le spam et les numéros inconnus ?
-          <strong>Contacts uniquement</strong> est la solution simple et minimaliste pour tous ceux qui recherchent productivité et confidentialité.
+          ¿Estás cansado de interrupciones constantes por parte de telemarketing, spam y números desconocidos?
+          <strong>Solo Contactos</strong> es la solución definitiva y minimalista para cualquiera que busque
+          productividad y privacidad.
         </p>
 
         <p>
-          Le principe est simple : si le numéro n’est pas dans votre carnet d’adresses, votre téléphone ne sonnera pas.
-          L’application rejette automatiquement l’appel avant que vous soyez interrompu.
+          La idea es sencilla: si el número no está en tu agenda, no hará sonar tu teléfono.
+          La aplicación rechaza la llamada automáticamente antes de que te interrumpan.
         </p>
       </section>
 
       <section>
-        <h2>Pourquoi choisir Contacts uniquement ?</h2>
+        <h2>¿Por qué elegir Solo Contactos?</h2>
         <ul>
-          <li><strong>Concentration totale :</strong> Idéal pour toutes les personnes qui ont besoin de rester concentrées au travail ou pendant les moments de repos.</li>
-          <li><strong>Confidentialité absolue :</strong> Vos contacts sont traités uniquement localement. Rien n’est envoyé au cloud ni partagé avec des tiers.</li>
-          <li><strong>Simplicité :</strong> Un seul bouton central pour activer et désactiver la protection.</li>
-          <li><strong>Statistiques :</strong> Suivez combien d’interruptions ont été évitées aujourd’hui, hier et au cours des 7 derniers jours.</li>
-          <li><strong>Technologie officielle :</strong> Nous utilisons l’API Android Call Screening pour garantir efficacité sans vider votre batterie.</li>
+          <li><strong>Enfoque total:</strong> Ideal para quienes necesitan concentración en el trabajo o en el descanso.</li>
+          <li><strong>Privacidad absoluta:</strong> Tus contactos se procesan solo localmente. Nada se envía a la nube ni se comparte con terceros.</li>
+          <li><strong>Simplicidad:</strong> Un único botón central para activar o desactivar la protección.</li>
+          <li><strong>Estadísticas:</strong> Sigue cuántas interrupciones evitaste hoy, ayer y en los últimos 7 días.</li>
+          <li><strong>Tecnología oficial:</strong> Usamos la API de Call Screening de Android para garantizar eficacia sin agotar la batería.</li>
         </ul>
       </section>
 
-      <section class="last-section">
+      <section>
         <p>
-          Gardez votre liste de contacts comme seul filtre et dites adieu aux appels indésirables.
+          Mantén tu agenda como único filtro y despídete de las llamadas no deseadas.
         </p>
-        <a class="privacy-link" href="politique-de-confidentialite/">Politique de confidentialité</a>
+        <a class="privacy-link" href="privacy-policy/">Política de privacidad</a>
         <br>
         <a class="download-link" href="https://play.google.com/store/apps/details?id=com.infodados.blockcalls" target="_blank" rel="noopener noreferrer">
-          Télécharger sur Google Play
+          Descargar en Google Play
         </a>
       </section>
     </article>
